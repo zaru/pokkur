@@ -44,6 +44,10 @@ var separate = new Vue({
         this.separateX = e.x;
         this.previewWidth = parseInt($('#preview').css('width').replace('px', ''));
         console.log('p = ' + this.previewWidth);
+
+        var dragIcon = document.createElement('img');
+        dragIcon.src = 'images/1x1.gif';
+        e.dataTransfer.setDragImage(dragIcon, -10, -10);
       },
       dragEnd: function(e) {
         var diff = this.separateX - e.x + this.previewWidth;
