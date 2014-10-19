@@ -25,9 +25,10 @@
 <!-- <button id="saveButton">save</button> -->
 
 <div id="content">
-  <textarea id="content-input" v-model="message" v-on="keydown: insert"></textarea>
+  <textarea id="editor" v-model="message" v-on="keydown: insert"></textarea>
   <div id="preview" v-highlight="message | marked"></div>
 </div>
+<div id="separate" draggable="true" v-on="dragstart: onDragStart, drag: dragging, dragend: dragEnd"></div>
 
     <!-- build:js(.) scripts/vendor.js -->
     <!-- bower:js -->

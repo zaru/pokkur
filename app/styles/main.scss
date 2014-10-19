@@ -10,7 +10,7 @@ html,body {
   z-index:100;
 }
 
-#content textarea {
+#editor {
   width:50%;
   height:100%;
   position:absolute;
@@ -21,9 +21,9 @@ html,body {
   box-sizing:border-box;
   padding:10px;
   resize:none;
-}
-#content textarea:focus {
-  outline:0;
+  :focus {
+    outline:0;
+  }
 }
 
 #preview {
@@ -32,6 +32,19 @@ html,body {
   position:absolute;
   top:0;
   right:0;
+  display: inline-block;
   padding:10px;
   box-sizing:border-box;
+}
+
+
+#separate {
+  position:absolute;
+  top:0;
+  left:50%;
+  width:5px;
+  background-color:#999;
+  cursor:col-resize;
+  height:100%;
+  z-index:5;
 }
