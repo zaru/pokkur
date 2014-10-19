@@ -1,16 +1,25 @@
-
-
-Vue.filter('marked', function (value) {
-    return marked(value);
+var vue = new Vue({
+    el: '#content',
+    data: {
+        message: "```php\n$test = 'piyo';\n```\n# hoge\ntest.test.test."
+    },
+    filters: {
+        marked: marked
+    }
 });
 
-var content = new Vue({
-  el: "#content",
-  data: {
-  }
+// Highlight.jsの初期設定
+hljs.configure({
+  classPrefix: ''
 });
+hljs.initHighlighting();
 
 
+
+/*
+ * ローカル上ではまだ動かさない（SSL必須なので）
+ *
+// Dropboxの認証
 var client = new Dropbox.Client({key: 'ox8biz2img8hvtr'});
 
 // Try to finish OAuth authorization.
@@ -52,3 +61,4 @@ jQuery('#saveButton').click(function() {
     }
   });
 });
+*/

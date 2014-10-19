@@ -5,11 +5,12 @@
     "jquery": "~1.11.1",
     "vue": "~0.10.6",
     "normalize.css": "~3.0.2",
-    "marked": "~0.3.2"
+    "marked": "~0.3.2",
+    "highlightjs": "~8.3.0"
   },
   "overrides": {
     "marked": {
-	  "main": "lib/marked.js"
-	}
+      "main": "lib/marked.js"
+    }
   }
 }
