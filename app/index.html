@@ -22,10 +22,10 @@
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
 
-<button id="saveButton">save</button>
+<!-- <button id="saveButton">save</button> -->
 
 <div id="content">
-  <textarea id="content-input" v-model="message"></textarea>
+  <textarea id="content-input" v-model="message" v-on="keydown: insert"></textarea>
   <div id="preview" v-highlight="message | marked"></div>
 </div>
 
