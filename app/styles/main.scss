@@ -3,6 +3,13 @@ html,body {
   height:100%;
 }
 
+#saveButton {
+  position: absolute;
+  bottom:10px;
+  right:10px;
+  z-index:100;
+}
+
 #content textarea {
   width:50%;
   height:100%;
